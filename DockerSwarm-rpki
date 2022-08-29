@@ -1,0 +1,43 @@
+version: '3.7'
+services:
+ rtr_rpki_server_1:
+  image: cloudflare/gortr
+  deploy:
+   mode: global
+   resources:
+    limits:
+     cpus: "4"
+     memory: "4g"
+   restart_policy:
+    condition: on-failure
+  ports:
+   - "8282:8282"
+  networks:
+   - rtr_rpki_server_network
+ rtr_rpki_server_2:
+  image: nlnetlabs/routinator
+  volumes:
+   - rtr_rpki_server_2_data:/home/routinator/.rpki-cache/tals
+  deploy:
+   mode: global
+   resources:
+    limits:
+     cpus: "4"
+     memory: "4g"
+   restart_policy:
+    condition: on-failure
+  ports:
+   - "3323:3323"
+  networks:
+   - rtr_rpki_server_network 
+networks:
+ rtr_rpki_server_network:
+  driver: overlay
+  attachable: true
+volumes:
+ rtr_rpki_server_2_data:
+  driver: local
+  driver_opts:
+   o: bind
+   type: none
+   device: /storage/nfs/docker-volumes/rtr_rpki_server_2_data
