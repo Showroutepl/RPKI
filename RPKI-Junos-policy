@@ -1,0 +1,12 @@
+set policy-options policy-statement ps-RPKI-eBGP-import term valid from protocol bgp
+set policy-options policy-statement ps-RPKI-eBGP-import term valid from validation-database valid
+set policy-options policy-statement ps-RPKI-eBGP-import term valid then validation-state valid
+set policy-options policy-statement ps-RPKI-eBGP-import term valid then accept
+set policy-options policy-statement ps-RPKI-eBGP-import term invalid from protocol bgp
+set policy-options policy-statement ps-RPKI-eBGP-import term invalid from validation-database invalid
+set policy-options policy-statement ps-RPKI-eBGP-import term invalid then validation-state invalid
+set policy-options policy-statement ps-RPKI-eBGP-import term invalid then reject
+set policy-options policy-statement ps-RPKI-eBGP-import term unknown from protocol bgp
+set policy-options policy-statement ps-RPKI-eBGP-import term unknown from validation-database unknown
+set policy-options policy-statement ps-RPKI-eBGP-import term unknown then validation-state unknown
+set policy-options policy-statement ps-RPKI-eBGP-import term unknown then accept
