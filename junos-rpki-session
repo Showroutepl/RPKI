@@ -1,0 +1,10 @@
+set routing-options validation group rpki-validator session 10.10.10.10 refresh-time 120
+set routing-options validation group rpki-validator session 10.10.10.10 hold-time 240
+set routing-options validation group rpki-validator session 10.10.10.10 record-lifetime 86400
+set routing-options validation group rpki-validator session 10.10.10.10 port 8282
+set routing-options validation group rpki-validator session 10.10.10.10 local-address 192.168.200.1
+set routing-options validation group rpki-validator session 10.10.10.11 refresh-time 120
+set routing-options validation group rpki-validator session 10.10.10.11 hold-time 240
+set routing-options validation group rpki-validator session 10.10.10.11 record-lifetime 86400
+set routing-options validation group rpki-validator session 10.10.10.11 port 8282
+set routing-options validation group rpki-validator session 10.10.10.11 local-address 192.168.200.1
