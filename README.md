@@ -9,3 +9,13 @@
 
 [Jak wdrożyć RPKI we własnej sieci?](https://showroute.pl/jak-wdrozyc-rpki-we-wlasnej-sieci/)
 
+
+
+
+
+# Hej to jeszcze nie koniec. Pozostańmy w kontakcie.  👋
+
+Dołącz do newslettera Showroute.pl. 
+Co tydzień dostaniesz mail z 5 linkami wraz z krótkim opisem do treści, związanymi z siecią, ciekawych wpisów, narzędzi, ofert pracy, analizy bieżących wydarzeń w sieci.  
+
+Zapisz się już teraz na https://showroute.pl/netprasowka/
